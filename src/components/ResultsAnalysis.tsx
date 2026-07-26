@@ -96,6 +96,12 @@ export const ResultsAnalysis: React.FC<ResultsAnalysisProps> = ({
         const sectionSummary = testResult.sectionResults
           .map((s) => `${s.section}: ${s.correctCount}/${s.totalQuestions} (${s.scorePercentage}%) - Grade ${s.grade}`)
           .join('\n');
+
+        console.log("testResult =", testResult);
+        console.log("Type:", typeof testResult.answers);
+console.log("Is Array:", Array.isArray(testResult.answers));
+console.log("Value:", testResult.answers);
+
     const detailedAnswerSummary = testResult.answers
   .map((answer, index) => {
     const question = answer.question;
