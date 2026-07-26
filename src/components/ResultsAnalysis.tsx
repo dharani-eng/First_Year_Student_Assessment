@@ -97,7 +97,108 @@ export const ResultsAnalysis: React.FC<ResultsAnalysisProps> = ({
           .map((s) => `${s.section}: ${s.correctCount}/${s.totalQuestions} (${s.scorePercentage}%) - Grade ${s.grade}`)
           .join('\n');
 
-        const prompt = `You are a Senior Academic Evaluator and Career Advisor. Analyze the test performance of student "${testResult.student.name}" from the "${testResult.student.department}" department who scored ${testResult.correctCount}/${testResult.totalQuestions} (${testResult.scorePercentage}% - Grade ${testResult.overallGrade}).
+        const prompt = `
+You are an Educational Psychologist, Student Counsellor, Psychometric Assessment Specialist, Career Guidance Expert, Computer Science Professor, and Academic Mentor.
+
+Your responsibility is to analyse the assessment for educational counselling purposes only.
+
+This is NOT a psychological diagnosis.
+
+Never mention disorders, diseases, depression, anxiety, or clinical conditions.
+
+Student Information
+
+Student Name:
+${student.name}
+
+Programme:
+Five Year Integrated M.Sc Computing
+
+Overall Score:
+${testResult.correctCount}/${testResult.totalQuestions}
+
+Overall Percentage:
+${testResult.scorePercentage}%
+
+Overall Grade:
+${testResult.overallGrade}
+
+Section-wise Performance
+
+${sectionSummary}
+
+Generate a highly professional counselling report.
+
+The report should contain exactly these headings.
+
+Executive Summary
+
+Cognitive Ability Analysis
+
+Computational Thinking Analysis
+
+Behavioural Traits Analysis
+
+Communication Skills Analysis
+
+Personality Profile
+
+Learning Behaviour
+
+Programming Readiness
+
+Leadership Potential
+
+Research Aptitude
+
+Problem Solving Ability
+
+Innovation & Creativity
+
+Academic Readiness
+
+Major Strengths
+
+Areas for Improvement
+
+Suggested Learning Activities
+
+Faculty Mentor Recommendations
+
+Parent Guidance
+
+Career Path Recommendation
+
+Six Month Improvement Plan
+
+Motivational Note
+
+Instructions
+
+Do not repeat the scores.
+
+Infer the student's strengths from the scores.
+
+Write naturally like an experienced counsellor.
+
+Avoid generic statements.
+
+Every student's report should be unique.
+
+Explain WHY you reached every conclusion.
+
+Provide constructive suggestions.
+
+Length should be around 1000–1500 words.
+
+Do not use Markdown.
+
+Do not use ** or ##.
+
+Write in professional English.
+
+End with an encouraging motivational message.
+`; 
 
 Section Breakdown:
 ${sectionSummary}
