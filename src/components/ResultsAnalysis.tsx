@@ -96,7 +96,38 @@ export const ResultsAnalysis: React.FC<ResultsAnalysisProps> = ({
         const sectionSummary = testResult.sectionResults
           .map((s) => `${s.section}: ${s.correctCount}/${s.totalQuestions} (${s.scorePercentage}%) - Grade ${s.grade}`)
           .join('\n');
+    const detailedAnswerSummary = testResult.answers
+  .map((answer, index) => {
+    const question = answer.question;
 
+    return `
+Question ${index + 1}
+
+Section:
+${question.section}
+
+Question:
+${question.question}
+
+Options:
+${question.options
+  .map((option, i) => `${String.fromCharCode(65 + i)}. ${option}`)
+  .join("\n")}
+
+Student Selected:
+${question.options[answer.selectedAnswer]}
+
+Correct Answer:
+${question.options[question.correctAnswer]}
+
+Result:
+${answer.selectedAnswer === question.correctAnswer ? "Correct" : "Incorrect"}
+
+Explanation:
+${question.explanation}
+`;
+  })
+  .join("\n--------------------------------------------------\n");
         const prompt = `
 You are an Educational Psychologist, Student Counsellor, Psychometric Assessment Specialist, Career Guidance Expert, Computer Science Professor, and Academic Mentor.
 
