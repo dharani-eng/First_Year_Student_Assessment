@@ -252,13 +252,19 @@ Important Instructions:
 Your report should read as if written by an experienced educational counsellor.`);
         setAiDiagnostic(cleanFormattingSymbols(res));
       } catch (err: any) {
-        setAiDiagnostic(
-          cleanFormattingSymbols(
-            `Diagnostic Assessment Summary for ${testResult.student.name}:\n\n- Overall Score: ${testResult.scorePercentage}% (${testResult.overallGrade})\n- Strongest Domain: ${
-              [...testResult.sectionResults].sort((a, b) => b.scorePercentage - a.scorePercentage)[0]?.section || 'Core Competencies'
-            }\n- Focus Requirement: Review key concepts in areas scoring below 75%.`
-          )
-        );
+        console.error("Gemini Error:", err);
+
+  setAiDiagnostic(
+    cleanFormattingSymbols(
+      `Gemini Error:
+
+${err.message}
+
+Diagnostic Assessment Summary for ${testResult.student.name}
+
+Overall Score: ${testResult.scorePercentage}%`
+    )
+  );
       } finally {
         setLoadingAi(false);
       }
