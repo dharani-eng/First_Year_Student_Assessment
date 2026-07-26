@@ -229,7 +229,7 @@ Do not use ** or ##.
 
 Write in professional English.
 
-End with an encouraging motivational message. 
+End with an encouraging motivational message. `;
 
 Section Breakdown:
 ${sectionSummary}
