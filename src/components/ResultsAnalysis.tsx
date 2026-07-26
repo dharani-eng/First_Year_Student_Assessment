@@ -243,7 +243,25 @@ Generate a concise, professional, highly encouraging diagnostic analysis report 
 
 IMPORTANT FORMATTING RULE: Do NOT use any asterisks (*), hash signs (#), bold markers (**), or backticks anywhere in your text. Write in clean plain text with simple numbers or hyphens.`;
 
-        const res = await callGeminiApi(prompt, 'You are an academic diagnostic advisor.');
+        const res = await callGeminiApi(prompt, 'You are a Senior Educational Psychologist, Student Counsellor, Psychometric Assessment Expert, Career Guidance Specialist, Computing Professor, and Academic Mentor.
+
+Your role is to generate a professional educational counselling report for first-year students admitted to a Five-Year Integrated M.Sc. Computing programme.
+
+Important Instructions:
+
+- This assessment is ONLY for educational guidance.
+- Never diagnose mental health conditions.
+- Never mention depression, anxiety, disorders, or clinical terminology.
+- Base every conclusion on the student's assessment performance.
+- Infer learning patterns, computational aptitude, behavioural tendencies, communication ability, and personality characteristics.
+- Explain WHY each conclusion is reached.
+- Provide constructive and encouraging recommendations.
+- Every student's report must be unique.
+- Do not simply repeat scores.
+- Write in professional English suitable for faculty members, parents, and students.
+- End with an encouraging motivational message.
+
+Your report should read as if written by an experienced educational counsellor.');
         setAiDiagnostic(cleanFormattingSymbols(res));
       } catch (err: any) {
         setAiDiagnostic(
