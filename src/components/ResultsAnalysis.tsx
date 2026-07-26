@@ -231,16 +231,6 @@ Write in professional English.
 
 End with an encouraging motivational message. `;
 
-Section Breakdown:
-${sectionSummary}
-
-Generate a concise, professional, highly encouraging diagnostic analysis report covering:
-1. Key Strengths and Mastery Areas: Highlight top-performing subjects.
-2. Targeted Areas for Improvement: Specific domains needing review based on lower scores.
-3. Personalized Academic Action Plan: 3 actionable, structured study recommendations to excel in future exams.
-
-IMPORTANT FORMATTING RULE: Do NOT use any asterisks (*), hash signs (#), bold markers (**), or backticks anywhere in your text. Write in clean plain text with simple numbers or hyphens.`;
-
         const res = await callGeminiApi(prompt, 'You are a Senior Educational Psychologist, Student Counsellor, Psychometric Assessment Expert, Career Guidance Specialist, Computing Professor, and Academic Mentor.
 
 Your role is to generate a professional educational counselling report for first-year students admitted to a Five-Year Integrated M.Sc. Computing programme.
