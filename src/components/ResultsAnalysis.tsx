@@ -231,7 +231,7 @@ Write in professional English.
 
 End with an encouraging motivational message. `;
 
-        const res = await callGeminiApi(prompt, 'You are a Senior Educational Psychologist, Student Counsellor, Psychometric Assessment Expert, Career Guidance Specialist, Computing Professor, and Academic Mentor.
+        const res = await callGeminiApi(prompt, `You are a Senior Educational Psychologist, Student Counsellor, Psychometric Assessment Expert, Career Guidance Specialist, Computing Professor, and Academic Mentor.
 
 Your role is to generate a professional educational counselling report for first-year students admitted to a Five-Year Integrated M.Sc. Computing programme.
 
@@ -249,7 +249,7 @@ Important Instructions:
 - Write in professional English suitable for faculty members, parents, and students.
 - End with an encouraging motivational message.
 
-Your report should read as if written by an experienced educational counsellor.');
+Your report should read as if written by an experienced educational counsellor.`);
         setAiDiagnostic(cleanFormattingSymbols(res));
       } catch (err: any) {
         setAiDiagnostic(
