@@ -1,0 +1,6 @@
+{
+  "name": "EduInsight",
+  "description": "EduInsight - Measure. Analyze. Improve. Interactive evaluation and diagnostic platform for academic assessment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
