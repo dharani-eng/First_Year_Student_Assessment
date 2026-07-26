@@ -157,7 +157,9 @@ ${testResult.overallGrade}
 Section-wise Performance
 
 ${sectionSummary}
+Detailed Question Analysis
 
+${detailedAnswerSummary}
 Generate a highly professional counselling report.
 
 The report should contain exactly these headings.
