@@ -11,7 +11,7 @@ export async function callGeminiApi(
       body: JSON.stringify({
         prompt,
         systemInstruction,
-        model: 'gemini-3.6-flash',
+        model: 'gemini-2.5-flash',
       }),
     });
 
