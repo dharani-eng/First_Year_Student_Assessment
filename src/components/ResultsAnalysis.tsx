@@ -128,8 +128,7 @@ ${question.explanation}
 `;
   })
   .join("\n--------------------------------------------------\n");
-        const prompt = `
-You are an Educational Psychologist, Student Counsellor, Psychometric Assessment Specialist, Career Guidance Expert, Computer Science Professor, and Academic Mentor.
+        const prompt = `You are an Educational Psychologist, Student Counsellor, Psychometric Assessment Specialist, Career Guidance Expert, Computer Science Professor, and Academic Mentor.
 
 Your responsibility is to analyse the assessment for educational counselling purposes only.
 
@@ -230,8 +229,7 @@ Do not use ** or ##.
 
 Write in professional English.
 
-End with an encouraging motivational message.
-`; 
+End with an encouraging motivational message. 
 
 Section Breakdown:
 ${sectionSummary}
